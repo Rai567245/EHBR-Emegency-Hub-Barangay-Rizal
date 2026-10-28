@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Settings · Emergency Hub Admin</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+<symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+<symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 01-3.4 0"/></symbol>
+<symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 2c1 4.5 6 6.5 6 12a6 6 0 01-12 0c0-3 1.5-4.5 3-7 .8 1 1.5 2 1.5 3.5C11.5 8 12 5 12 2z"/></symbol>
+<symbol id="i-warn" viewBox="0 0 24 24"><path d="M10.3 3.9L1.8 18a2 2 0 001.7 3h17a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0zM12 9v4M12 17h.01"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+<symbol id="i-mega" viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 001 1h2l5 4V6L6 10H4a1 1 0 00-1 1zM16 8a5 5 0 010 8M19 5a9 9 0 010 14"/></symbol>
+<symbol id="i-dl" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></symbol>
+<symbol id="i-img" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.9M16 3.1a4 4 0 010 7.8"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 000-7.8z"/></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+<symbol id="i-chev-l" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></symbol>
+<symbol id="i-chev-r" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="i-locate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="8"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></symbol>
+<symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/></symbol>
+<symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M8 6V4a1 1 0 011-1h6a1 1 0 011 1v2M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6M10 11v6M14 11v6"/></symbol>
+<symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></symbol>
+<symbol id="i-edit" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></symbol><symbol id="i-block" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></symbol></defs></svg>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand__logo"><svg class="icon "><use href="#i-plus"/></svg></div>
+      <div><p class="brand__name">Emergency Hub</p><p class="brand__sub">Admin Console</p></div></div>
+    <p class="nav__label">MANAGE</p>
+    <a class="nav__item" href="index.html"><svg class="icon "><use href="#i-grid"/></svg>Dashboard</a>
+    <a class="nav__item" href="incident-map.html"><svg class="icon "><use href="#i-pin"/></svg>Incident Map</a>
+    <a class="nav__item" href="blockages.html"><svg class="icon "><use href="#i-block"/></svg>Road Blockages</a>
+    <a class="nav__item" href="reports.html"><svg class="icon "><use href="#i-file"/></svg>Reports<span class="nav__badge" hidden>0</span></a>
+    <a class="nav__item" href="announcements.html"><svg class="icon "><use href="#i-mega"/></svg>Announcements</a>
+    <a class="nav__item" href="database.html"><svg class="icon "><use href="#i-db"/></svg>Database</a>
+    <a class="nav__item is-active" href="settings.html"><svg class="icon "><use href="#i-sliders"/></svg>Settings</a>
+    <div class="sidebar__spacer"></div>
+    <div class="user"><div class="user__avatar">AD</div>
+      <div><p class="user__name">Admin</p><p class="user__place">Administrator</p></div>
+      <button class="logout" id="logoutBtn" title="Log out" aria-label="Log out"><svg class="icon "><use href="#i-logout"/></svg></button></div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <div><h1 class="topbar__title">Settings</h1><p class="topbar__sub" id="pageSub">Barangay profile, emergency contacts and alert rules</p></div>
+      <div class="topbar__spacer"></div>
+      <label class="search"><svg class="icon "><use href="#i-search"/></svg><input id="globalSearch" type="search" placeholder="Search reports (press Enter)"></label>
+      <a class="icon-btn" href="reports.html" aria-label="Reports"><svg class="icon "><use href="#i-bell"/></svg><span class="bell-dot" hidden></span></a>
+    </header>
+    <div style="padding:16px 24px 0"><nav class="tabs" id="tabs"><a class="tab is-on" href="#general" data-tab="general">General</a><a class="tab" href="#alerts" data-tab="alerts">Alerts &amp; Escalation</a><a class="tab" href="#privacy" data-tab="privacy">Data &amp; Privacy</a><a class="tab" href="#contacts" data-tab="contacts">Emergency Contacts</a><a class="tab" href="#zones" data-tab="zones">Zones &amp; Puroks</a><a class="tab" href="#account" data-tab="account">Account &amp; Security</a></nav></div>
+    <form class="st" id="stForm" style="display:block" novalidate>
+      <div class="st__col" style="max-width:980px">
+        <div class="errbar" id="errBar" hidden></div>
+        <section class="sec" data-pane="general"><div><h2 class="sec__title">Barangay profile</h2><p class="sec__sub">Shown in the resident app header and on the Contacts screen</p></div>
+          <div class="fields">
+            <div class="field"><label for="bName">Barangay</label><input class="input" id="bName" maxlength="80"></div>
+            <div class="field"><label for="bCity">City / Municipality</label><input class="input" id="bCity" maxlength="80"></div>
+            <div class="field"><label for="bRegion">Region</label><input class="input" id="bRegion" maxlength="40"></div>
+            <div class="field"><label for="bHot">Barangay hotline</label><input class="input" id="bHot" maxlength="30"></div>
+            <div class="field"><label for="bLat">Default map latitude</label><input class="input" id="bLat" inputmode="decimal"></div>
+            <div class="field"><label for="bLng">Default map longitude</label><input class="input" id="bLng" inputmode="decimal"></div>
+            <div class="field" style="grid-column:1/-1"><label for="bBorder">Barangay border (optional, exact)</label><textarea class="input" id="bBorder" rows="4" spellcheck="false" placeholder="Paste the GeoJSON of your barangay border here. Leave empty to use the radius below."></textarea><small id="bBorderInfo">Draw it free at geojson.io: pick the polygon tool, click around the border, then copy the text from the right-hand panel. When a border is set, maps are limited to it and the radius is ignored.</small></div>
+            <div class="field"><label for="bRad">Service area radius (km)</label><input class="input" id="bRad" inputmode="decimal" placeholder="e.g. 3"><small>Maps are limited to this area around the point above. Reports with GPS outside it are flagged. 0 = no limit.</small></div>
+          </div></section>
+
+        <section class="sec" data-pane="general"><div><h2 class="sec__title">SOS</h2><p class="sec__sub">What the resident app’s SOS button dials</p></div>
+          <div class="crow"><span class="crow__name" style="width:160px">SOS number</span><input class="input" id="sosNum" maxlength="20" style="margin-left:0;width:200px">
+            <span style="margin-left:auto" class="crow__show">Require 3-second press-and-hold</span><label class="toggle"><input type="checkbox" id="sosHold" aria-label="Hold to confirm"><i></i></label></div></section>
+
+        <section class="sec" data-pane="contacts"><div><h2 class="sec__title">Emergency contacts</h2><p class="sec__sub">Shown in the resident app’s Contacts tab and on the “report saved offline” screen, so keep them accurate</p></div>
+          <div id="contactRows" style="display:flex;flex-direction:column;gap:10px"></div>
+          <button class="btn btn--fit add-row" id="addContact" type="button"><svg class="icon "><use href="#i-plus"/></svg>Add contact</button></section>
+
+        <section class="sec" data-pane="alerts"><div><h2 class="sec__title">Escalation rules</h2><p class="sec__sub">What happens when a report is not handled in time</p></div>
+          <div class="trow"><span>Auto-escalate unverified Critical reports after <input class="input" id="rMin" inputmode="numeric" maxlength="3" style="width:64px;display:inline-block;margin:0 6px" aria-label="Minutes"> minutes</span><label class="toggle"><input type="checkbox" id="rAuto"><i></i></label></div>
+          <div class="trow"><span>Notify nearby residents when a report is verified</span><label class="toggle"><input type="checkbox" id="rNotify"><i></i></label></div>
+          <div class="trow"><span>Allow residents to hide their name on reports</span><label class="toggle"><input type="checkbox" id="rAnon"><i></i></label></div>
+          <div class="trow"><span>Send SMS fallback to residents with poor connectivity</span><label class="toggle"><input type="checkbox" id="rSms"><i></i></label></div>
+          <p class="sec__sub" style="margin:0">Auto-escalation and SMS are saved for when those services are connected; they do not send anything yet. Notifications use the app’s push channel.</p></section>
+        <section class="sec" data-pane="alerts"><div><h2 class="sec__title">Escalation chain</h2><p class="sec__sub">Higher-level offices an admin can escalate a report to, in order</p></div>
+          <div id="chainRows" style="display:flex;flex-direction:column;gap:10px"></div>
+          <button class="btn btn--fit add-row" id="addChain" type="button"><svg class="icon "><use href="#i-plus"/></svg>Add office</button></section>
+        <section class="sec" data-pane="alerts"><div><h2 class="sec__title">Alert templates</h2><p class="sec__sub">Reusable messages for announcements</p></div>
+          <div id="tplRows" style="display:flex;flex-direction:column;gap:10px"></div>
+          <button class="btn btn--fit add-row" id="addTpl" type="button"><svg class="icon "><use href="#i-plus"/></svg>New template</button></section>
+
+        <section class="sec" data-pane="privacy"><div><h2 class="sec__title">Data protection</h2><p class="sec__sub">Aligned with the Data Privacy Act of 2012. These protections are built in and cannot be switched off.</p></div>
+          <div class="trow"><span>Contact numbers are masked by default (last 4 digits shown)</span><b class="lock-tag">Always on</b></div>
+          <div class="trow"><span>Revealing or exporting personal data is logged with your name</span><b class="lock-tag">Always on</b></div>
+          <div class="trow"><span>Exports need a stated reason and never include full contact numbers</span><b class="lock-tag">Always on</b></div>
+          <div class="trow"><span>Only administrators can view residents or export data</span><b class="lock-tag">Always on</b></div></section>
+        <section class="sec" data-pane="privacy"><div style="display:flex;align-items:center"><div><h2 class="sec__title">Access log</h2><p class="sec__sub">Recent views, exports and changes made by admins</p></div><button class="btn btn--fit" id="logExport" type="button" style="margin-left:auto">Export log</button></div>
+          <div style="overflow:auto"><table class="tbl"><thead><tr><th>Time</th><th>Action</th><th>Type</th></tr></thead><tbody id="logBody"></tbody></table></div><div id="logEmpty"></div></section>
+
+        <section class="sec" data-pane="zones"><div><h2 class="sec__title">Zones &amp; puroks</h2><p class="sec__sub">Used for filters, alerts, resident registration and reports</p></div>
+          <div id="zonesView"></div><a class="btn btn--fit" href="database.html#zones" style="width:fit-content">Manage zones in Database</a></section>
+
+        <section class="sec" data-pane="account"><div><h2 class="sec__title">Account &amp; Security</h2><p class="sec__sub">Use a strong password you do not use elsewhere. Changing it is logged.</p></div>
+          <div class="trow"><span>Administrator account · <b id="acctName"></b></span><button class="btn btn--fit" type="button" id="chgPw">Change password</button></div></section>
+
+        <div class="savebar" id="savebar" data-editable><span id="saveMsg">All changes saved</span><span class="grow"></span>
+          <button class="btn btn--fit" type="button" id="discard">Discard</button><button class="btn btn--primary btn--fit" type="button" id="save">Save changes</button></div>
+      </div></form>
+  </div>
+</div>
+<script src="app.js"></script>
+<script src="pages/settings.js"></script>
+</body>
+</html>
