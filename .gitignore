@@ -1,0 +1,7 @@
+server/data.json
+server/data.json.tmp
+node_modules/
+app/build/
+app/.dart_tool/
+server/firebase-service-account.json
+app/lib/firebase_options.dart.bak
