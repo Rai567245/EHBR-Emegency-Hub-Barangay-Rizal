@@ -1,10 +1,15 @@
 # EHBR Daily Development Progress — 2026-10-29
 
 **Project:** Emergency Hub Barangay System (EHBR)
+
 **Contributor:** Vanrey G. Magalong (@Rai567245)
+
 **Development area:** MAM (Mobile App Mode — Resident Side)
-**Branch:** `[branch-name]`
+
+**Branch:** main
+
 **Commit / PR:** Not provided
+
 **Overall status:** In Progress
 
 ---
